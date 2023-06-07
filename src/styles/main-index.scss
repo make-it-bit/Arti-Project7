@@ -1,0 +1,59 @@
+@use 'variables';
+@use "./bootstrap-grid/bootstrap-grid.css";
+@use "./general-styles/reset.css";
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    color: variables.$header-color;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 85%;
+    margin: 0 auto;
+    flex-wrap: wrap-reverse;
+}
+
+header > div {
+    text-align: center;
+    flex: 1;
+}
+
+header img {
+    flex: 0.5;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.form_section {
+    box-sizing: border-box;
+    text-align: center;
+    background-color: variables.$div-background-color;
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid variables.$border-color;
+    border-radius: 2px;
+}
+
+.form_section > h2{
+    color: variables.$header-color;
+    margin-top: 5px;
+    font-size: 1.6rem;
+}
+
+footer {
+    background-color: variables.$div-background-color;
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 3rem;
+    border-top: 1px solid variables.$border-color;
+    margin-top: auto;
+}
