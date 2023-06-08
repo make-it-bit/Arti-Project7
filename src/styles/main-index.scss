@@ -33,7 +33,6 @@ header img {
 }
 
 .form_section {
-    box-sizing: border-box;
     text-align: center;
     background-color: variables.$div-background-color;
     width: 80%;
@@ -44,7 +43,53 @@ header img {
 }
 
 input[type=radio] {
-    /*display: none;*/
+    display: none;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.radio_label{
+    background-color: variables.$other-color-1;
+    border: 2px solid variables.$border-color;
+    margin: 2px;
+    padding: 3px;
+}
+
+.radio_label:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.col:hover {
+    margin: auto 15px;
+}
+
+.radio_label span:first-of-type{
+    font-weight: 600;
+    display: block;
+}
+
+.big_label {
+    font-size: 1.3rem;
+    font-weight: 550;
+}
+
+.small_label span:first-of-type{
+    font-size: 1.15rem;
+}
+
+.radio_label:has(> input:checked) {
+    background-color: variables.$other-color-2;
+}
+
+.new_form_item {
+    margin-top: 12px;
+}
+
+.container{
+    max-width: 90%;
 }
 
 .form_section h2{
@@ -52,6 +97,26 @@ input[type=radio] {
     margin-top: 5px;
     font-weight: 600;
     font-size: 1.5rem;
+}
+
+input[type=number] {
+    padding: 7px 10px;
+    border: 2px solid variables.$border-color;
+    background-color: variables.$other-color-1;
+}
+
+input[type=number]:focus {
+    background: variables.$other-color-2;
+    outline: none;
+}
+
+::placeholder {
+    color: variables.$header-color;
+    font-size: 1rem;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 footer {
