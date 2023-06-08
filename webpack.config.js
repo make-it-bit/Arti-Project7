@@ -6,7 +6,8 @@ module.exports = {
     mode: 'development',
     entry: {
         "index": path.resolve(__dirname, 'src/index.js'),
-        "meal-plan": path.resolve(__dirname, 'src/meal-plan.js')
+        "meal-plan": path.resolve(__dirname, 'src/meal-plan.js'),
+        "form-handler": path.resolve(__dirname, 'src/other-scripts/form-handler.js')
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -72,14 +73,14 @@ module.exports = {
             filename: 'index.html',
             template: 'src/index.html',
             inject: true,
-            chunks: ['index']
+            chunks: ['index', 'form-handler']
         }),
         new HtmlWebpackPlugin({
             title: 'Meal Generator - Meal plan',
             filename: 'meal-plan.html',
             template: 'src/templates/meal-plan.html',
             inject: true,
-            chunks: ['meal-plan']
+            chunks: ['meal-plan', 'form-handler']
         })
     ]
 };

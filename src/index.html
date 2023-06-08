@@ -16,36 +16,156 @@
         </header>
         <main>
             <section class="form_section">
-                <h2>Calculate Your macros.</h2>
-                <form class="container">
+                <div class="row form_selector">
+                    <label for="calculate_your_macros" class="col">
+                        <input type="radio" id="calculate_your_macros" name="form_type" checked/>
+                        <span>Calculate Your Macros</span>
+                    </label>
+                    <label for="enter_your_macros" class="col">
+                        <input type="radio" id="enter_your_macros" name="form_type"/>
+                        <span>Enter Your Own Macros</span>
+                    </label>
+                </div>
+                <form class="form1 container">
                    <div class="row">
-                        <label for="height_input">Height</label>
-                        <input type="number" id="height_input" min="99" max="220" placeholder="Height (cm)" required/>
+                        <label for="form1_height_input">Height</label>
+                        <input type="number" id="form1_height_input" min="99" max="220" placeholder="Height in cm (99-220)" required/>
                    </div>
                    <div class="row">
-                        <label for="weight_input">Weight</label>
-                        <input type="number" id="weight_input" min="10" max="150" placeholder="Weight (kg)" required/>
+                        <label for="form1_weight_input">Weight</label>
+                        <input type="number" id="form1_weight_input" min="10" max="150" placeholder="Weight in kg (10-150)" required/>
                    </div>
                    <div class="row">
-                        <label for="age_input">Age</label>
-                        <input type="number" id="age_input" min="16" max="99" placeholder="Age (years)" required/>
+                        <label for="form1_age_input">Age</label>
+                        <input type="number" id="form1_age_input" min="16" max="99" placeholder="Age in years (16-99)" required/>
                    </div>
                     <div class="row d-flex justify-content-center">
-                        <label for="radio_male" class="col-md-6">
-                            <input type="radio" name="gender_radio" value="male" id="radio_male" required/>
-                            <p>Male</p>
+                        <label for="form1_radio_gender_male" class="col-md-6">
+                            <input type="radio" name="form1_gender_radio" value="male" id="form1_radio_gender_male" required/>
+                            <span>Male</span>
                         </label>
-                        <label for="radio_female" class="col-md-6">
-                            <input type="radio" name="gender_radio" value="female" id="radio_female" required/>
-                            <p>Female</p>
+                        <label for="form1_radio_gender_female" class="col-md-6">
+                            <input type="radio" name="form1_gender_radio" value="female" id="form1_radio_gender_female" required/>
+                            <span>Female</span>
                         </label>
                     </div>
+                    <!--Activity level starts here-->
+                    <div class="row justify-content-center">
+                        <label for="form1_activity_level_radio">Activity level</label>
+                    </div>
+                    <br/>
+                    <label for="form1_activity_level_radio_sedentary" class="row">
+                        <input type="radio" id="form1_activity_level_radio_sedentary" name="form1_activity_level_radio" value="sedentary" required/>
+                        <span>Sedentary</span>
+                        <span>No formal exercise and not physically active in daily life.</span>
+                    </label>
+                    <label for="form1_activity_level_radio_lightly_active" class="row">
+                        <input type="radio" id="form1_activity_level_radio_lightly_active" name="form1_activity_level_radio" value="lightly_active" required/>
+                        <span>Lightly Active</span>
+                        <span>Light exercise 1-3 days per week.</span>
+                    </label>
+                    <label for="form1_activity_level_radio_active" class="row">
+                        <input type="radio" id="form1_activity_level_radio_active" name="form1_activity_level_radio" value="active" required/>
+                        <span>Active</span>
+                        <span>Exerice 4-5 times per week.</span>
+                    </label>
+                    <label for="form1_activity_level_radio_very_active" class="row">
+                        <input type="radio" id="form1_activity_level_radio_very_active" name="form1_activity_level_radio" value="very_active" required/>
+                        <span>Very Active</span>
+                        <span>Exerice daily, or strenous exercise 3-4 days per week.</span>
+                    </label>
+                    <label for="form1_activity_level_radio_extremely_active" class="row"> 
+                        <input type="radio" id="form1_activity_level_radio_extremely_active" name="form1_activity_level_radio" value="extremely_active" required/>
+                        <span>Extremely Active</span>
+                        <span>Strenous exercise 6-7 days per week, or physical labour.</span>
+                    </label>
+                    <!--Goal-->
                     <div class="row">
-                        <label>Activity level</label>
-                        <!--another radio element-->
+                        <label for="form1_weight_goal_radio">Goal</label>
+                    </div>
+                    <label for="form1_weight_goal_radio_lose_weight" class="row">
+                        <input type="radio" name="form1_weight_goal_radio" id="form1_weight_goal_radio_lose_weight" value="lose_weight" required/>
+                        <span>Lose weight</span>
+                    </label>
+                    <label for="form1_weight_goal_radio_maintain_weight" class="row">
+                        <input type="radio" name="form1_weight_goal_radio" id="form1_weight_goal_radio_maintain_weight" value="maintain_weight" required/>
+                        <span>Maintain weight</span>
+                    </label>
+                    <label for="form1_weight_goal_radio_gain_weight" class="row">
+                        <input type="radio" name="form1_weight_goal_radio" id="form1_weight_goal_radio_gain_weight" value="gain_weight" required/>
+                        <span>Gain Weight</span>
+                    </label>
+                    <!--Diet type-->
+                    <div class="row">
+                        <label for="form1_diet_type_radio">Diet type</label>
+                    </div>
+                    <label for="form1_diet_type_radio_normal" class="row">
+                        <input type="radio" name="form1_diet_type_radio" id="form1_diet_type_radio_normal" value="normal" required/>
+                        <span>Normal</span>
+                    </label>
+                    <label for="form1_diet_type_radio_vegetarian" class="row">
+                        <input type="radio" name="form1_diet_type_radio" id="form1_diet_type_radio_vegetarian" value="vegetarian" required/>
+                        <span>Vegetarian</span>
+                    </label>
+                    <label for="form1_diet_type_radio_vegan" class="row">
+                        <input type="radio" name="form1_diet_type_radio" id="form1_diet_type_radio_vegan" value="vegan" required/>
+                        <span>Vegan</span>
+                    </label>
+                    <div class="row">
+                        <button type="submit" id="form1_submit_button">Calculate Macros</button>
                     </div>
                 </form>
+                <form class="form2 container">
+                    <div class="row">
+                        <select id="form2_diet_type_select" required>
+                            <option selected disabled>Diet type</option>
+                            <option value="normal">Normal</option>
+                            <option value="vegetarian">Vegatarian</option>
+                            <option value="vegan">Vegan</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <input type="number" id="form2_calories" placeholder="Calories" min="1400" max="6000" required/>
+                    </div>
+                    <div class="row">
+                        <input type="number" id="form2_protein" placeholder="Protein" min="40" max="600" required/>
+                    </div>
+                    <div class="row">
+                        <input type="number" id="form2_fat" placeholder="Fat" min="15" max="300" required/>
+                    </div>
+                    <div class="row">
+                        <input type="number" id="form2_carbohydrates" placeholder="Carbohydrates" min="40" max="600"/>
+                    </div>
+                    <div class="row">
+                        <button type="submit">Generate Meal plan</button>
+                    </div>
+                </form>
+                <section class="macro_results">
+                    <h2>Your Suggested Macros</h2>
+                    <div class="container">
+                        <div class="row">
+                            <h3>Calories</h3>
+                            <p class="macro_results_data"></p>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h3>Protein</h3>
+                                <p class="macro_results_data"></p>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>Carbohydrates</h3>
+                                <p class="macro_results_data"></p>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>Fats</h3>
+                                <p class="macro_results_data"></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </section>
+            <p>Site uses formulas from this <a href="https://www.k-state.edu/paccats/Contents/PA/PDF/Physical%20Activity%20and%20Controlling%20Weight.pdf">file</a>
+            to calculate the amount of calories You burn on a daily basis.</p>
         </main>
     </div>
     <footer>

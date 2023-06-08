@@ -43,10 +43,15 @@ header img {
     border-radius: 2px;
 }
 
-.form_section > h2{
+input[type=radio] {
+    /*display: none;*/
+}
+
+.form_section h2{
     color: variables.$header-color;
     margin-top: 5px;
-    font-size: 1.6rem;
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 
 footer {
