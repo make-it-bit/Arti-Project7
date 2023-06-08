@@ -119,6 +119,48 @@ input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
+button {
+    background-color: variables.$other-color-2;
+    padding: 10px 5px;
+    font-size: 1.1rem;
+    font-weight: 550;
+    border: 2px solid variables.$border-color;
+}
+button:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.info {
+    text-align: center;
+    margin: calc(5vh + 8px) auto;
+}
+
+.info h2 {
+    font-size: 1.5rem;
+}
+
+.info p {
+    font-size: 1.1rem;
+    font-weight: 550;
+}
+
+.form2_select_box {
+    background-color: variables.$other-color-1;
+    font-size: 1.1rem;
+    border: 2px solid variables.$border-color;
+    padding: 5px 8px;
+}
+
+.form2_select_box:hover, .form2_select_box:focus {
+    outline: none;
+    transform: scaleY(1.1);
+}
+.form2_select_box option:hover, .form2_select_box option:checked, select:focus > option:checked {
+    background-color: variables.$other-color-2;
+    background: variables.$other-color-2 !important;
+}
+
 footer {
     background-color: variables.$div-background-color;
     text-align: center;
