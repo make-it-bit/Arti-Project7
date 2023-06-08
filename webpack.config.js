@@ -1,6 +1,7 @@
 const path = require('path');
 const html = require('html-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
     mode: 'development',
@@ -81,6 +82,6 @@ module.exports = {
             template: 'src/templates/meal-plan.html',
             inject: true,
             chunks: ['meal-plan', 'form-handler']
-        })
+        }),
     ]
 };

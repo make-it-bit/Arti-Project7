@@ -112,6 +112,21 @@
                         <span>Vegan</span>
                     </label>
                     <div class="row">
+                        <label>Im allergic towards</label>
+                        <label for="form1_allergy_nuts" class="col-4">
+                            <input type="checkbox" id="form1_allergy_nuts" name="form1_allergies" value="nuts"/>
+                            <span>Nuts</span>
+                        </label>
+                        <label for="form1_allergy_fish" class="col-4">
+                            <input type="checkbox" id="form1_allergy_fish" name="form1_allergies" value="fish"/>
+                            <span>Fish</span>
+                        </label>
+                        <label for="form1_allergy_dairy" class="col-4">
+                            <input type="checkbox" id="form1_allergy_dairy" name="form1_allergies" value="dairy"/>
+                            <span>Dairy</span>
+                        </label>
+                    </div>
+                    <div class="row">
                         <button type="submit" id="form1_submit_button">Calculate Macros</button>
                     </div>
                 </form>
@@ -137,6 +152,21 @@
                         <input type="number" id="form2_carbohydrates" placeholder="Carbohydrates" min="40" max="600"/>
                     </div>
                     <div class="row">
+                        <label>Im allergic towards</label>
+                        <label for="form2_allergy_nuts" class="col-4">
+                            <input type="checkbox" id="form2_allergy_nuts" name="form2_allergies" value="nuts"/>
+                            <span>Nuts</span>
+                        </label>
+                        <label for="form2_allergy_fish" class="col-4">
+                            <input type="checkbox" id="form2_allergy_fish" name="form2_allergies" value="fish" required/>
+                            <span>Fish</span>
+                        </label>
+                        <label for="form2_allergy_dairy" class="col-4">
+                            <input type="checkbox" id="form2_allergy_dairy" name="form2_allergies" value="dairy" required/>
+                            <span>Dairy</span>
+                        </label>
+                    </div>
+                    <div class="row">
                         <button type="submit">Generate Meal plan</button>
                     </div>
                 </form>
@@ -148,18 +178,21 @@
                             <p class="macro_results_data"></p>
                         </div>
                         <div class="row">
-                            <div class="col-lg-4">
+                            <div class="col-md-4">
                                 <h3>Protein</h3>
                                 <p class="macro_results_data"></p>
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-md-4">
                                 <h3>Carbohydrates</h3>
                                 <p class="macro_results_data"></p>
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-md-4">
                                 <h3>Fats</h3>
                                 <p class="macro_results_data"></p>
                             </div>
+                        </div>
+                        <div class="row">
+                            <button id="macro_results_get_meal_plan_button">Get Meal Plan</button>
                         </div>
                     </div>
                 </section>
