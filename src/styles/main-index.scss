@@ -1,6 +1,6 @@
 @use 'variables';
 @use "./bootstrap-grid/bootstrap-grid.css";
-@use "./general-styles/reset.css";
+@use "./general-styles/reset.scss";
 
 body{
     display: flex;
@@ -10,7 +10,7 @@ body{
 
 header {
     text-align: center;
-    color: variables.$header-color;
+    color: variables.$div-background-color;
     font-size: 2rem;
     display: flex;
     align-items: center;
@@ -27,8 +27,8 @@ header > div {
 
 header img {
     flex: 0.5;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     margin: 0 auto;
 }
 
@@ -99,6 +99,14 @@ input[type=checkbox] {
     font-size: 1.5rem;
 }
 
+.macro_results h2 {
+    color: variables.$background-color;
+}
+
+.macro_results {
+    color: variables.$other-color-1;
+}
+
 input[type=number] {
     padding: 7px 10px;
     border: 2px solid variables.$border-color;
@@ -156,16 +164,28 @@ button:hover {
     outline: none;
     transform: scaleY(1.1);
 }
+
 .form2_select_box option:hover, .form2_select_box option:checked, select:focus > option:checked {
     background-color: variables.$other-color-2;
     background: variables.$other-color-2 !important;
+}
+
+.brighter_text {
+    color: variables.$other-color-2;
+}
+
+.form2 {
+    margin-top: calc(2.5vh + 7px);
+}
+
+.macro_results {
+    margin: calc(2.5vh + 7px) auto;
 }
 
 footer {
     background-color: variables.$div-background-color;
     text-align: center;
     font-size: 1.3rem;
-    line-height: 3rem;
     border-top: 1px solid variables.$border-color;
     margin-top: auto;
 }

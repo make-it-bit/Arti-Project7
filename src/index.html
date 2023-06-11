@@ -30,15 +30,15 @@
                 </div>
                 <form class="form1 container">
                    <div class="row new_form_item">
-                        <label for="form1_height_input" class="big_label">Height</label>
+                        <label for="form1_height_input" class="big_label brighter_text">Height</label>
                         <input type="number" id="form1_height_input" min="99" max="220" placeholder="Height in cm (99-220)" required/>
                    </div>
                    <div class="row new_form_item">
-                        <label for="form1_weight_input" class="big_label">Weight</label>
+                        <label for="form1_weight_input" class="big_label brighter_text">Weight</label>
                         <input type="number" id="form1_weight_input" min="10" max="150" placeholder="Weight in kg (10-150)" required/>
                    </div>
                    <div class="row new_form_item">
-                        <label for="form1_age_input" class="big_label">Age</label>
+                        <label for="form1_age_input" class="big_label brighter_text">Age</label>
                         <input type="number" id="form1_age_input" min="16" max="99" placeholder="Age in years (16-99)" required/>
                    </div>
                     <div class="row d-flex justify-content-center new_form_item">
@@ -53,7 +53,7 @@
                     </div>
                     <!--Activity level starts here-->
                     <div class="row justify-content-center new_form_item">
-                        <label for="form1_activity_level_radio" class="big_label"><span>Activity level</span></label>
+                        <label for="form1_activity_level_radio" class="big_label brighter_text"><span>Activity level</span></label>
                     </div>
                     <div class="row">
                         <label for="form1_activity_level_radio_sedentary" class="radio_label small_label">
@@ -92,7 +92,7 @@
                     </div>
                     <!--Goal-->
                     <div class="row new_form_item">
-                        <label for="form1_weight_goal_radio" class="big_label">Goal</label>
+                        <label for="form1_weight_goal_radio" class="big_label brighter_text">Goal</label>
                     </div>
                     <div class="row">
                         <label for="form1_weight_goal_radio_lose_weight" class="row radio_label small_label">
@@ -114,7 +114,7 @@
                     </div>
                     <!--Diet type-->
                     <div class="row new_form_item">
-                        <label for="form1_diet_type_radio" class="big_label">Diet type</label>
+                        <label for="form1_diet_type_radio" class="big_label brighter_text">Diet type</label>
                     </div>
                     <div class="row">
                         <label for="form1_diet_type_radio_normal" class="row radio_label small_label">
@@ -135,7 +135,7 @@
                         </label>
                     </div>
                     <div class="row justify-content-center new_form_item">
-                        <label for="form1_allergies" class="big_label">Im allergic towards</label>
+                        <label for="form1_allergies" class="big_label brighter_text">Im allergic towards</label>
                         <label for="form1_allergy_nuts" class="radio_label col small_label">
                             <input type="checkbox" id="form1_allergy_nuts" name="form1_allergies" value="nuts"/>
                             <span>Nuts</span>
@@ -163,19 +163,19 @@
                         </select>
                     </div>
                     <div class="row new_form_item">
-                        <input type="number" id="form2_calories" placeholder="Calories" min="1400" max="6000" required/>
+                        <input type="number" id="form2_calories" placeholder="Calories (g)" min="1400" max="6000" required/>
                     </div>
                     <div class="row new_form_item">
-                        <input type="number" id="form2_protein" placeholder="Protein" min="40" max="600" required/>
+                        <input type="number" id="form2_protein" placeholder="Protein (g)" min="40" max="600" required/>
                     </div>
                     <div class="row new_form_item">
-                        <input type="number" id="form2_fat" placeholder="Fat" min="15" max="300" required/>
+                        <input type="number" id="form2_fat" placeholder="Fat (g)" min="15" max="300" required/>
                     </div>
                     <div class="row new_form_item">
                         <input type="number" id="form2_carbohydrates" placeholder="Carbohydrates" min="40" max="600"/>
                     </div>
                     <div class="row new_form_item">
-                        <label class="big_label"><span>Im allergic towards</span></label>
+                        <label class="big_label brighter_text"><span>Im allergic towards</span></label>
                         <label for="form2_allergy_nuts" class="col radio_label small_label">
                             <input type="checkbox" id="form2_allergy_nuts" name="form2_allergies" value="nuts"/>
                             <span>Nuts</span>
@@ -194,7 +194,9 @@
                     </div>
                 </form>
                 <section class="macro_results">
-                    <h2>Your Suggested Macros</h2>
+                    <div class="brighter_text">
+                        <h2>Your Suggested Macros</h2>
+                    </div>
                     <div class="container">
                         <div class="row">
                             <h3>Calories</h3>
@@ -227,8 +229,8 @@
             </section>
         </main>
     </div>
-    <footer>
-        © 2023 Bitropia, All Rights Reserved
+    <footer class="brighter_text">
+       <p>© 2023 Bitropia, All Rights Reserved</p>
     </footer>
 </body>
 </html>
