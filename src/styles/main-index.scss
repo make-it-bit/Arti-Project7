@@ -183,6 +183,14 @@ button:hover {
     margin: calc(2.5vh + 7px) auto;
 }
 
+.macro_results p {
+    font-size: 1.2rem;
+}
+
+.macro_results h3 {
+    font-size: 1.5rem;
+}
+
 footer {
     background-color: variables.$div-background-color;
     text-align: center;
