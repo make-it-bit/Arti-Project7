@@ -73,12 +73,16 @@ input[type=checkbox] {
 }
 
 .big_label {
-    font-size: 1.3rem;
+    font-size: 1.45rem;
     font-weight: 550;
 }
 
+.small_label span {
+    font-size: 1.1rem;
+}
+
 .small_label span:first-of-type{
-    font-size: 1.15rem;
+    font-size: 1.35rem;
 }
 
 .radio_label:has(> input:checked) {
@@ -97,7 +101,7 @@ input[type=checkbox] {
     color: variables.$header-color;
     margin-top: 5px;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 .macro_results h2 {
@@ -131,7 +135,7 @@ input[type=number]::-webkit-inner-spin-button {
 button {
     background-color: variables.$other-color-2;
     padding: 10px 5px;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 550;
     border: 2px solid variables.$border-color;
 }
