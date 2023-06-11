@@ -8,6 +8,7 @@ body{
     min-height: 100vh;
 }
 
+//the flex properties of these classes now mainly work with bootstrap grid
 header {
     text-align: center;
     color: variables.$div-background-color;
@@ -29,7 +30,7 @@ header img {
     flex: 0.5;
     width: 150px;
     height: 150px;
-    margin: 0 auto;
+    margin: 1vw auto 0 auto;
 }
 
 .form_section {
