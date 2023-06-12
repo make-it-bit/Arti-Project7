@@ -5,7 +5,7 @@
 body {
     text-align: center;
     display: flex;
-    min-width: 100vh;
+    min-height: 100vh;
     flex-direction: column;
     overflow: auto;
 }
@@ -16,15 +16,16 @@ body {
 
 h2 {
     color: variables.$header-color;
-    margin-top: 5px;
     font-weight: 600;
     font-size: 1.65rem;
+    margin-top: calc(6px + 1.5vh);
 }
 
 h3 {
     font-size: 1.35rem;
     color: variables.$other-color-2;
 }
+
 
 a {
     display: block;
@@ -36,9 +37,44 @@ p {
     color: variables.$border-color;
 }
 
+.smaller_p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1rem;
+}
+
+.row {
+    margin: calc(8px + 2vh) auto;
+}
+
+.link {
+    text-decoration: none;
+    color: variables.$div-background-color;
+    background-color: variables.$other-color-2;
+    padding: 10px 5px;
+    margin: calc(7px + 1.5vh) calc(10px + 2vh) calc(8px + 2vh) calc(10px + 2vh);
+    font-size: 1.3rem;
+    font-weight: 550;
+    border: 2px solid variables.$border-color;
+}
+
+.link:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+hr {
+    height: 2px;
+    background-color: variables.$other-color-2;
+    border: none;
+    border-radius: 2px;
+    width: 85%;
+}
+
 header {
     font-size: 1.5rem;
     margin: auto 10px;
+    color: variables.$div-background-color;
 }
 
 main {
