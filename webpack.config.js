@@ -8,7 +8,8 @@ module.exports = {
     entry: {
         "index": path.resolve(__dirname, 'src/index.js'),
         "meal-plan": path.resolve(__dirname, 'src/meal-plan.js'),
-        "form-handler": path.resolve(__dirname, 'src/other-scripts/form-handler.js')
+        "form-handler": path.resolve(__dirname, 'src/other-scripts/form-handler.js'),
+        'display-meal-plan': path.resolve(__dirname, 'src/other-scripts/display-meal-plan.js')
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -81,7 +82,7 @@ module.exports = {
             filename: 'meal-plan.html',
             template: 'src/templates/meal-plan.html',
             inject: true,
-            chunks: ['meal-plan', 'form-handler']
+            chunks: ['meal-plan'/*, 'form-handler'*/, 'display-meal-plan']
         }),
     ]
 };

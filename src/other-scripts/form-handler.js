@@ -1,9 +1,17 @@
 import calculateCaloriesAndMacrosNeeded from "./calories-needed";
 import getMealPlan from "./mealplan-generator";
+//import generateHtmlForMeals from "./display-meal-plan";
+
+//checking the page 
+function getCurrentUrl() {
+    console.log(window.location.pathname)
+    return window.location.pathname;
+}
 
 //setting up the enviornment
 const macroResultsSection = document.querySelector('.macro_results');
 macroResultsSection.style.display = 'none';
+
 
 //"global variables
 let macros;
@@ -23,7 +31,6 @@ function showUserMacroResults(listOfDataValues) {
 };
 
 //FOR TESTS - DELETE LATER FOR PROD
-
 macroResultsSection.style.display = 'block';
 
 macros = {
@@ -34,10 +41,12 @@ macros = {
     allergies: ['nuts', 'dairy'],
     dietType: 'vegan'
 };
-
 showUserMacroResults([macros.caloriesNeeded, macros.protein, macros.carbohydrates, macros.fat]);
 
+
+
 //handling the actions of form1
+
 const form1 = document.querySelector('.form1');
 
 form1.addEventListener('submit', (e) => {
@@ -66,69 +75,17 @@ form1.addEventListener('submit', (e) => {
     macros = userMacros;
 });
 
-//handling the get meal-plan request by user in form1
-const form1GetMealPlanButton = document.querySelector('#macro_results_get_meal_plan_button');
-const mealplanResultsSection = document.querySelector('#meal_plan_results')
 
+//handling the get meal plan 'event'
+const form1GetMealPlanButton = document.querySelector('#macro_results_get_meal_plan_button');
+    
 form1GetMealPlanButton.addEventListener('click', async () => {
     console.log('trying to generate some meal plan');
     const meals = await getMealPlan(macros);
     console.log(meals);
+    meals.push([macros]);
+    localStorage.setItem("meals", JSON.stringify(meals))
     //add 'data shown per serving' label or smth
-
-    const html = generateHtmlForMeals(meals);
-    
-    mealplanResultsSection.appendChild(html);
-    window.href = '/meal-plan.html'
+    window.location.pathname = '/meal-plan.html';
 });
 
-
-//function for generating the HTML elements that display the info of the meals for the day
-function generateHtmlForMeals(objectWithArrays) {
-    function generateHtmlForOneDay(numberOfDay, breakfast, dinner, lunch) {
-        const parentDiv = document.createElement('div');
-
-        const headerForTheDay = document.createElement('h3');
-        headerForTheDay.innerText = `Day ${numberOfDay}`;
-        parentDiv.appendChild(headerForTheDay);
-        
-        //creating breakfast's element
-        const breakfastDiv = document.createElement('div');
-        
-        const breakfastHeader = document.createElement('p');
-        breakfastHeader.innerText = `Breakfast - ${breakfast.recipe.label}`;
-        breakfastDiv.appendChild(breakfastHeader);
-
-        const caloriesElement = document.createElement('p');
-        caloriesElement.innerText = `${Math.floor((breakfast.recipe.calories / breakfast.recipe.totalWeight) * 100)} kcal`;
-        breakfastDiv.appendChild(caloriesElement);
-
-        const proteinElement = document.createElement('p');
-        proteinElement.innerText = `${Math.floor((breakfast.recipe.totalNutrients.PROCNT.quantity / breakfast.recipe.totalWeight) * 100)}g of Protein`
-        breakfastDiv.appendChild(proteinElement);
-
-        const carbohydrateElement = document.createElement('p');
-        carbohydrateElement.innerText = `${Math.floor((breakfast.recipe.totalNutrients.CHOCDF.quantity / breakfast.recipe.totalWeight) * 100)}g of Carbs`
-        breakfastDiv.appendChild(carbohydrateElement);
-
-        const fatElement = document.createElement('p');
-        fatElement.innerText = `${Math.floor((breakfast.recipe.totalNutrients.FAT.quantity / breakfast.recipe.totalWeight) * 100)}g of Fat`;
-        breakfastDiv.appendChild(fatElement);
-
-        const imageElement = document.createElement('img');
-        imageElement.src = breakfast.recipe.images.REGULAR.url;
-        imageElement.alt = 'Picture of the meal';
-        breakfastDiv.appendChild(imageElement);
-
-        const linkToRecipe = document.createElement('a');
-        linkToRecipe.innerText = 'Find out more';
-        linkToRecipe.href = breakfast.recipe.url;
-        breakfastDiv.appendChild(linkToRecipe);
-
-        parentDiv.appendChild(breakfastDiv);
-
-        return parentDiv;
-    };
-
-    return generateHtmlForOneDay(1, objectWithArrays[0][0]);
-};

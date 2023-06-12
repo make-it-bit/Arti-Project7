@@ -1,3 +1,62 @@
 @use 'variables';
 @use './general-styles/reset.scss';
 @use './bootstrap-grid/bootstrap-grid.css';
+
+body {
+    text-align: center;
+    display: flex;
+    min-width: 100vh;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.big_flex_element {
+    flex: 1;
+}
+
+h2 {
+    color: variables.$header-color;
+    margin-top: 5px;
+    font-weight: 600;
+    font-size: 1.65rem;
+}
+
+h3 {
+    font-size: 1.35rem;
+    color: variables.$other-color-2;
+}
+
+a {
+    display: block;
+}
+
+p {
+    font-size: 1.2rem;
+    font-weight: 550;
+    color: variables.$border-color;
+}
+
+header {
+    font-size: 1.5rem;
+    margin: auto 10px;
+}
+
+main {
+    background-color: variables.$div-background-color;
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid variables.$border-color;
+    border-radius: 2px;
+
+}
+
+footer {
+    background-color: variables.$div-background-color;
+    border-top: 1px solid variables.$border-color;
+    margin-top: auto;
+}
+
+.footer_text {
+    font-size: 1.3rem;
+}
