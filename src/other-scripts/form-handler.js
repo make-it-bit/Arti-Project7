@@ -30,23 +30,7 @@ function showUserMacroResults(listOfDataValues) {
     };
 };
 
-//FOR TESTS - DELETE LATER FOR PROD
-macroResultsSection.style.display = 'block';
-
-macros = {
-    caloriesNeeded: 3229, 
-    carbohydrates: 403, 
-    protein: 242,
-    fat: 71,
-    allergies: ['nuts', 'dairy'],
-    dietType: 'vegan'
-};
-showUserMacroResults([macros.caloriesNeeded, macros.protein, macros.carbohydrates, macros.fat]);
-
-
-
 //handling the actions of form1
-
 const form1 = document.querySelector('.form1');
 
 form1.addEventListener('submit', (e) => {
@@ -84,8 +68,39 @@ form1GetMealPlanButton.addEventListener('click', async () => {
     const meals = await getMealPlan(macros);
     console.log(meals);
     meals.push([macros]);
-    localStorage.setItem("meals", JSON.stringify(meals))
-    //add 'data shown per serving' label or smth
+    localStorage.setItem("meals", JSON.stringify(meals));
     window.location.pathname = '/meal-plan.html';
 });
 
+//handling the actions of form2
+const form2 = document.querySelector('#form2');
+
+form2.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    //getting the forms values
+    const userDietType = document.querySelector('#form2_diet_type_select').value;
+    const userCalories = document.querySelector('#form2_calories').value;
+    const userProtein = document.querySelector('#form2_protein').value;
+    const userFat = document.querySelector('#form2_fat').value;
+    const userCarbohydrates = document.querySelector('#form2_carbohydrates').value;
+    const allergiesElements = document.querySelectorAll('input[name="form1_allergies"]:checked');
+    const allergies = [];
+    allergiesElements.forEach((allergyElement) => allergies.push(allergyElement.value));
+
+    macros = {
+        caloriesNeeded: userCalories,
+        carbohydrates: userCarbohydrates,
+        protein: userProtein,
+        fat: userFat,
+        allergies,
+        dietType: userDietType
+    };
+    
+    console.log('trying to generate some meal plan');
+    const meals = await getMealPlan(macros);
+    console.log(meals);
+    meals.push([macros]);
+    localStorage.setItem("meals", JSON.stringify(meals));
+    window.location.pathname = '/meal-plan.html';
+});

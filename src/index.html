@@ -157,7 +157,7 @@
                         <button type="submit" id="form1_submit_button">Calculate Macros</button>
                     </div>
                 </form>
-                <form class="form2 container">
+                <form class="form2 container" id="form2">
                     <div class="row new_form_item">
                         <select id="form2_diet_type_select" class="form2_select_box" required>
                             <option selected disabled>Diet Type</option>
@@ -167,29 +167,29 @@
                         </select>
                     </div>
                     <div class="row new_form_item">
-                        <input type="number" id="form2_calories" placeholder="Calories (g)" min="1400" max="6000" required/>
+                        <input type="number" id="form2_calories" placeholder="Calories in grams (1400-6000)" min="1400" max="6000" required/>
                     </div>
                     <div class="row new_form_item">
-                        <input type="number" id="form2_protein" placeholder="Protein (g)" min="40" max="600" required/>
+                        <input type="number" id="form2_protein" placeholder="Protein in grams (40-600)" min="40" max="600" required/>
                     </div>
                     <div class="row new_form_item">
-                        <input type="number" id="form2_fat" placeholder="Fat (g)" min="15" max="300" required/>
+                        <input type="number" id="form2_fat" placeholder="Fat in grams (15-300)" min="15" max="300" required/>
                     </div>
                     <div class="row new_form_item">
-                        <input type="number" id="form2_carbohydrates" placeholder="Carbohydrates" min="40" max="600"/>
+                        <input type="number" id="form2_carbohydrates" placeholder="Carbohydrates in grams (40-600)" min="40" max="600" required/>
                     </div>
                     <div class="row new_form_item">
-                        <label class="big_label brighter_text"><span>Im allergic towards</span></label>
+                        <label class="big_label brighter_text" for="form2_allergies"><span>Im allergic towards</span></label>
                         <label for="form2_allergy_nuts" class="col radio_label small_label">
                             <input type="checkbox" id="form2_allergy_nuts" name="form2_allergies" value="nuts"/>
                             <span>Nuts</span>
                         </label>
                         <label for="form2_allergy_fish" class="col radio_label small_label">
-                            <input type="checkbox" id="form2_allergy_fish" name="form2_allergies" value="fish" required/>
+                            <input type="checkbox" id="form2_allergy_fish" name="form2_allergies" value="fish"/>
                             <span>Fish</span>
                         </label>
                         <label for="form2_allergy_dairy" class="col radio_label small_label">
-                            <input type="checkbox" id="form2_allergy_dairy" name="form2_allergies" value="dairy" required/>
+                            <input type="checkbox" id="form2_allergy_dairy" name="form2_allergies" value="dairy"/>
                             <span>Dairy</span>
                         </label>
                     </div>

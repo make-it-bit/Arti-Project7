@@ -1,8 +1,10 @@
 //function for generating the HTML elements that display the info of the meals for the day
 function generateHtmlForMeals(objectWithArrays) {
+    //add handling in case there are no meals to display
     console.log(objectWithArrays);
     
     const mealplanResultsSection = document.querySelector('#meal_plan_results');
+
 
     function generateHtmlForOneDay(numberOfDay, breakfast, lunch, dinner, macros) {
         const parentDiv = document.createElement('div');
@@ -173,6 +175,7 @@ function generateHtmlForMeals(objectWithArrays) {
         dinnerDiv.appendChild(dinnerLinkToRecipe);
 
         parentDiv.appendChild(dinnerDiv);
+
         parentDiv.appendChild(hr);
         
         return parentDiv;
