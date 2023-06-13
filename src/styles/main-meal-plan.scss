@@ -50,12 +50,12 @@ p {
 .link {
     text-decoration: none;
     color: variables.$blackish;
-    background-color: variables.$bright-green;
+    background-color: variables.$medium-green;
     padding: 10px 5px;
     margin: calc(7px + 1.5vh) calc(10px + 2vh) calc(8px + 2vh) calc(10px + 2vh);
     font-size: 1.3rem;
     font-weight: 550;
-    border: 2px solid variables.$medium-green;
+    border: 2px solid variables.$dark-green;
 }
 
 .link:hover {
