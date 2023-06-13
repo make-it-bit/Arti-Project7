@@ -2,22 +2,12 @@ import calculateCaloriesAndMacrosNeeded from "./calories-needed";
 import getMealPlan from "./mealplan-generator";
 //import generateHtmlForMeals from "./display-meal-plan";
 
-//checking the page 
-function getCurrentUrl() {
-    console.log(window.location.pathname)
-    return window.location.pathname;
-}
-
 //setting up the enviornment
 const macroResultsSection = document.querySelector('.macro_results');
 macroResultsSection.style.display = 'none';
 
-
-//"global variables
 let macros;
 
-//functions for displaying data
-//loops the macros into the dom
 function showUserMacroResults(listOfDataValues) {
     macroResultsSection.style.display = 'block';
     const dataSlots = document.getElementsByClassName('macro_results_data');
