@@ -88,19 +88,27 @@ form2.addEventListener('submit', async (e) => {
     const allergies = [];
     allergiesElements.forEach((allergyElement) => allergies.push(allergyElement.value));
 
-    macros = {
-        caloriesNeeded: userCalories,
-        carbohydrates: userCarbohydrates,
-        protein: userProtein,
-        fat: userFat,
-        allergies,
-        dietType: userDietType
+    //checking if the macros check up 
+    console.log(((userProtein * 4 + userFat * 9 + userCarbohydrates * 4) - 150) > userCalories)
+    const caloriesDontMatchMacros = ((userProtein * 4 + userFat * 9 + userCarbohydrates * 4) - 150) > userCalories || ((userProtein * 4 + userFat * 9 + userCarbohydrates * 4) + 150) < userCalories;
+
+    if (!caloriesDontMatchMacros) {
+        macros = {
+            caloriesNeeded: userCalories,
+            carbohydrates: userCarbohydrates,
+            protein: userProtein,
+            fat: userFat,
+            allergies,
+            dietType: userDietType
+        };
+        
+        console.log('trying to generate some meal plan');
+        const meals = await getMealPlan(macros);
+        console.log(meals);
+        meals.push([macros]);
+        localStorage.setItem("meals", JSON.stringify(meals));
+        window.location.pathname = '/meal-plan.html';
+    } else {
+        alert("Please check that the macros and calories match.")
     };
-    
-    console.log('trying to generate some meal plan');
-    const meals = await getMealPlan(macros);
-    console.log(meals);
-    meals.push([macros]);
-    localStorage.setItem("meals", JSON.stringify(meals));
-    window.location.pathname = '/meal-plan.html';
 });
