@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="description" content="Do mollit ipsum irure esse veniam labore enim minim laborum amet Lorem ut occaecat."/>
+    <meta name="keywords" content="generated meal plan, diet"/>
 </head>
 <body>
     <div class="big_flex_element">
@@ -13,7 +15,9 @@
         </header>
         <main>
             <section>
-                <div class="meal_plan_results" id="meal_plan_results"></div>
+                <div class="meal_plan_results" id="meal_plan_results">
+                    <!--Here will appear the data added by scripts.-->
+                </div>
                 <a href="/" title="Back home." class="link back_link">Back</a>
             </section>
         </main>

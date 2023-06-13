@@ -45,7 +45,7 @@
    }
  }
  :root {
-   --bs-breakpoint-xs: 0;
+   --bs-breakpoint-xs: 0px;
    --bs-breakpoint-sm: 576px;
    --bs-breakpoint-md: 768px;
    --bs-breakpoint-lg: 992px;

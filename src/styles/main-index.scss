@@ -11,7 +11,7 @@ body{
 //the flex properties of these classes now mainly work with bootstrap grid
 header {
     text-align: center;
-    color: variables.$div-background-color;
+    color: variables.$blackish;
     font-size: 2rem;
     display: flex;
     align-items: center;
@@ -35,11 +35,11 @@ header img {
 
 .form_section {
     text-align: center;
-    background-color: variables.$div-background-color;
+    background-color: variables.$blackish;
     width: 80%;
     margin: 20px auto;
     padding: 10px;
-    border: 1px solid variables.$border-color;
+    border: 1px solid variables.$medium-green;
     border-radius: 2px;
 }
 
@@ -52,8 +52,8 @@ input[type=checkbox] {
 }
 
 .radio_label{
-    background-color: variables.$other-color-1;
-    border: 2px solid variables.$border-color;
+    background-color: variables.$medium-green;
+    border: 2px solid variables.$dark-green;
     margin: 2px;
     padding: 3px;
 }
@@ -86,7 +86,7 @@ input[type=checkbox] {
 }
 
 .radio_label:has(> input:checked) {
-    background-color: variables.$other-color-2;
+    background-color: variables.$bright-green;
 }
 
 .new_form_item {
@@ -98,34 +98,27 @@ input[type=checkbox] {
 }
 
 .form_section h2{
-    color: variables.$header-color;
+    color: variables.$blackish;
     margin-top: 5px;
     font-weight: 600;
     font-size: 1.6rem;
 }
 
-.macro_results h2 {
-    color: variables.$background-color;
-}
-
-.macro_results {
-    color: variables.$other-color-1;
-}
-
 input[type=number] {
+    font-size: 1.15rem;
     padding: 7px 10px;
-    border: 2px solid variables.$border-color;
-    background-color: variables.$other-color-1;
+    border: 2px solid variables.$medium-green;
+    background-color: variables.$medium-green;
 }
 
 input[type=number]:focus {
-    background: variables.$other-color-2;
+    background: variables.$bright-green;
     outline: none;
 }
 
 ::placeholder {
-    color: variables.$header-color;
-    font-size: 1rem;
+    color: variables.$blackish;
+    font-size: 1.1rem;
 }
 
 input[type=number]::-webkit-inner-spin-button {
@@ -133,12 +126,13 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 button {
-    background-color: variables.$other-color-2;
+    background-color: variables.$bright-green;
     padding: 10px 5px;
     font-size: 1.25rem;
     font-weight: 550;
-    border: 2px solid variables.$border-color;
+    border: 2px solid variables.$medium-green;
 }
+
 button:hover {
     transform: scale(1.05);
     transition: 0.3s;
@@ -159,9 +153,9 @@ button:hover {
 }
 
 .form2_select_box {
-    background-color: variables.$other-color-1;
+    background-color: variables.$medium-green;
     font-size: 1.1rem;
-    border: 2px solid variables.$border-color;
+    border: 2px solid variables.$medium-green;
     padding: 5px 8px;
 }
 
@@ -171,12 +165,12 @@ button:hover {
 }
 
 .form2_select_box option:hover, .form2_select_box option:checked, select:focus > option:checked {
-    background-color: variables.$other-color-2;
-    background: variables.$other-color-2 !important;
+    background-color: variables.$bright-green;
+    background: variables.$bright-green !important;
 }
 
 .brighter_text {
-    color: variables.$other-color-2;
+    color: variables.$bright-green;
 }
 
 .form2 {
@@ -185,6 +179,14 @@ button:hover {
 
 .macro_results {
     margin: calc(2.5vh + 7px) auto;
+}
+
+.macro_results h2 {
+    color: variables.$bright-green;
+}
+
+.macro_results {
+    color: variables.$medium-green;
 }
 
 .macro_results p {
@@ -196,11 +198,73 @@ button:hover {
 }
 
 footer {
-    background-color: variables.$div-background-color;
+    background-color: variables.$blackish;
     text-align: center;
-    border-top: 1px solid variables.$border-color;
+    border-top: 1px solid variables.$medium-green;
     margin-top: auto;
     font-size: 1.3rem;
 }
 
 
+@media screen and (max-width: 825px) {
+    .form_selector .radio_label{
+        margin: auto 3px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+    }
+    .form_selector .radio_label:hover {
+        transform: none;
+        margin: auto 3px;
+        background-color: variables.$bright-green;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .form_selector .radio_label {
+        height: auto;
+    }  
+    html {
+        font-size: 15px;
+    }
+    .macro_results h3 {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .macro_results p {
+        margin-bottom: 7px;
+    }
+    .macro_results_get_meal_plan_button{
+        margin-top: 12px;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .radio_label:hover {
+        transform: none;
+        background-color: variables.$bright-green;
+    }
+    .form_section {
+        width: 90%;
+    }
+    html {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 307px) {
+    .form_selector .radio_label {
+        height: 120px;
+    }  
+}
+
+@media screen and (max-width: 273px) {
+    .form_selector .radio_label {
+        height: auto;
+    }
+}
