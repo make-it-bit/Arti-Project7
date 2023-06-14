@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack serve"
+    "dev": "webpack serve",
+    "ci:lighthouse": "lhci autorun"
   },
   "keywords": [],
   "author": "Arti - Bitropia",
@@ -13,6 +14,7 @@
   "devDependencies": {
     "@babel/core": "^7.22.1",
     "@babel/preset-env": "^7.22.4",
+    "@lhci/cli": "^0.12.0",
     "autoprefixer": "^10.4.14",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.8.1",

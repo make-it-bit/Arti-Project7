@@ -1,7 +1,7 @@
 import generateHtmlForOneDay from "./html-generators/meals-for-day-generator";
 
 //function for generating the HTML elements that display the info of the meals for the day
-function generateHtmlForMeals(objectWithArrays) {
+const generateHtmlForMeals = (objectWithArrays) => {
     //add handling in case there are no meals to display
     const mealplanResultsSection = document.querySelector('#meal_plan_results');
 

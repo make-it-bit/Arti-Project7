@@ -1,4 +1,4 @@
-import nutritionIcon from './assets/nutrition_icon.svg';
+import nutritionIcon from './public/nutrition_icon.svg';
 import './styles/main-index.scss';
 
 document.querySelector('#calory_icon').src = nutritionIcon;

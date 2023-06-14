@@ -3,7 +3,7 @@ const API_ID = 'cccf4bab';
 const API_KEY = '0697729895b68a38aee3a528944a33b2';
 //generate requests here https://developer.edamam.com/edamam-docs-recipe-api#/
 
-async function getMealPlan(objectWithMacros) {
+const getMealPlan = async (objectWithMacros) => {
     //getting the macros for each meal of the day
     const breakfastMacros = {
         calories: Math.floor(objectWithMacros.caloriesNeeded * 0.3),

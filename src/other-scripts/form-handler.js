@@ -43,7 +43,6 @@ form1.addEventListener('submit', (e) => {
 
     showUserMacroResults([userMacros.caloriesNeeded, userMacros.protein, userMacros.carbohydrates, userMacros.fat]);
 
-    console.log(userMacros);
     userMacros.allergies = allergies;
     userMacros.dietType = userDietType;
     macros = userMacros;
@@ -54,9 +53,7 @@ form1.addEventListener('submit', (e) => {
 const form1GetMealPlanButton = document.querySelector('#macro_results_get_meal_plan_button');
     
 form1GetMealPlanButton.addEventListener('click', async () => {
-    console.log('trying to generate some meal plan');
     const meals = await getMealPlan(macros);
-    console.log(meals);
     meals.push([macros]);
     localStorage.setItem("meals", JSON.stringify(meals));
     window.location.pathname = '/meal-plan.html';
@@ -79,7 +76,6 @@ form2.addEventListener('submit', async (e) => {
     allergiesElements.forEach((allergyElement) => allergies.push(allergyElement.value));
 
     //checking if the macros check up 
-    console.log(((userProtein * 4 + userFat * 9 + userCarbohydrates * 4) - 150) > userCalories)
     const caloriesDontMatchMacros = ((userProtein * 4 + userFat * 9 + userCarbohydrates * 4) - 150) > userCalories || ((userProtein * 4 + userFat * 9 + userCarbohydrates * 4) + 150) < userCalories;
 
     if (!caloriesDontMatchMacros) {
@@ -92,9 +88,7 @@ form2.addEventListener('submit', async (e) => {
             dietType: userDietType
         };
         
-        console.log('trying to generate some meal plan');
         const meals = await getMealPlan(macros);
-        console.log(meals);
         meals.push([macros]);
         localStorage.setItem("meals", JSON.stringify(meals));
         window.location.pathname = '/meal-plan.html';
