@@ -37,14 +37,14 @@ const generateHtmlForOneDay = ({
   breakfastMacros.setAttribute('class', 'row');
 
   const breakfastCaloriesElement = document.createElement('p');
-  breakfastCaloriesElement.setAttribute('class', 'col-sm smaller_p');
+  breakfastCaloriesElement.setAttribute('class', 'col-sm smallerP');
   breakfastCaloriesElement.innerText = `${Math.floor(
     (breakfast.recipe.calories / breakfast.recipe.totalWeight) * 100
   )} kcal`;
   breakfastMacros.appendChild(breakfastCaloriesElement);
 
   const breakfastProteinElement = document.createElement('p');
-  breakfastProteinElement.setAttribute('class', 'col-sm smaller_p');
+  breakfastProteinElement.setAttribute('class', 'col-sm smallerP');
   breakfastProteinElement.innerText = `${Math.floor(
     (breakfast.recipe.totalNutrients.PROCNT.quantity /
       breakfast.recipe.totalWeight) *
@@ -53,7 +53,7 @@ const generateHtmlForOneDay = ({
   breakfastMacros.appendChild(breakfastProteinElement);
 
   const breakfastCarbohydrateElement = document.createElement('p');
-  breakfastCarbohydrateElement.setAttribute('class', 'col-sm smaller_p');
+  breakfastCarbohydrateElement.setAttribute('class', 'col-sm smallerP');
   breakfastCarbohydrateElement.innerText = `${Math.floor(
     (breakfast.recipe.totalNutrients.CHOCDF.quantity /
       breakfast.recipe.totalWeight) *
@@ -62,7 +62,7 @@ const generateHtmlForOneDay = ({
   breakfastMacros.appendChild(breakfastCarbohydrateElement);
 
   const breakfastFatElement = document.createElement('p');
-  breakfastFatElement.setAttribute('class', 'col-sm smaller_p');
+  breakfastFatElement.setAttribute('class', 'col-sm smallerP');
   breakfastFatElement.innerText = `${Math.floor(
     (breakfast.recipe.totalNutrients.FAT.quantity /
       breakfast.recipe.totalWeight) *
@@ -108,14 +108,14 @@ const generateHtmlForOneDay = ({
   lunchMacros.setAttribute('class', 'row');
 
   const lunchCaloriesElement = document.createElement('p');
-  lunchCaloriesElement.setAttribute('class', 'col-sm smaller_p');
+  lunchCaloriesElement.setAttribute('class', 'col-sm smallerP');
   lunchCaloriesElement.innerText = `${Math.floor(
     (lunch.recipe.calories / lunch.recipe.totalWeight) * 100
   )} kcal`;
   lunchMacros.appendChild(lunchCaloriesElement);
 
   const lunchProteinElement = document.createElement('p');
-  lunchProteinElement.setAttribute('class', 'col-sm smaller_p');
+  lunchProteinElement.setAttribute('class', 'col-sm smallerP');
   lunchProteinElement.innerText = `${Math.floor(
     (lunch.recipe.totalNutrients.PROCNT.quantity / lunch.recipe.totalWeight) *
       100
@@ -123,7 +123,7 @@ const generateHtmlForOneDay = ({
   lunchMacros.appendChild(lunchProteinElement);
 
   const lunchCarbohydrateElement = document.createElement('p');
-  lunchCarbohydrateElement.setAttribute('class', 'col-sm smaller_p');
+  lunchCarbohydrateElement.setAttribute('class', 'col-sm smallerP');
   lunchCarbohydrateElement.innerText = `${Math.floor(
     (lunch.recipe.totalNutrients.CHOCDF.quantity / lunch.recipe.totalWeight) *
       100
@@ -131,7 +131,7 @@ const generateHtmlForOneDay = ({
   lunchMacros.appendChild(lunchCarbohydrateElement);
 
   const lunchFatElement = document.createElement('p');
-  lunchFatElement.setAttribute('class', 'col-sm smaller_p');
+  lunchFatElement.setAttribute('class', 'col-sm smallerP');
   lunchFatElement.innerText = `${Math.floor(
     (lunch.recipe.totalNutrients.FAT.quantity / lunch.recipe.totalWeight) * 100
   )}g of Fat `;
@@ -175,14 +175,14 @@ const generateHtmlForOneDay = ({
   dinnerMacros.setAttribute('class', 'row');
 
   const dinnerCaloriesElement = document.createElement('p');
-  dinnerCaloriesElement.setAttribute('class', 'col-sm smaller_p');
+  dinnerCaloriesElement.setAttribute('class', 'col-sm smallerP');
   dinnerCaloriesElement.innerText = `${Math.floor(
     (dinner.recipe.calories / dinner.recipe.totalWeight) * 100
   )} kcal`;
   dinnerMacros.appendChild(dinnerCaloriesElement);
 
   const dinnerProteinElement = document.createElement('p');
-  dinnerProteinElement.setAttribute('class', 'col-sm smaller_p');
+  dinnerProteinElement.setAttribute('class', 'col-sm smallerP');
   dinnerProteinElement.innerText = `${Math.floor(
     (dinner.recipe.totalNutrients.PROCNT.quantity / dinner.recipe.totalWeight) *
       100
@@ -190,7 +190,7 @@ const generateHtmlForOneDay = ({
   dinnerMacros.appendChild(dinnerProteinElement);
 
   const dinnerCarbohydrateElement = document.createElement('p');
-  dinnerCarbohydrateElement.setAttribute('class', 'col-sm smaller_p');
+  dinnerCarbohydrateElement.setAttribute('class', 'col-sm smallerP');
   dinnerCarbohydrateElement.innerText = `${Math.floor(
     (dinner.recipe.totalNutrients.CHOCDF.quantity / dinner.recipe.totalWeight) *
       100
@@ -198,7 +198,7 @@ const generateHtmlForOneDay = ({
   dinnerMacros.appendChild(dinnerCarbohydrateElement);
 
   const dinnerFatElement = document.createElement('p');
-  dinnerFatElement.setAttribute('class', 'col-sm smaller_p');
+  dinnerFatElement.setAttribute('class', 'col-sm smallerP');
   dinnerFatElement.innerText = `${Math.floor(
     (dinner.recipe.totalNutrients.FAT.quantity / dinner.recipe.totalWeight) *
       100
