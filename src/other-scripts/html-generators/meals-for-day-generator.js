@@ -1,10 +1,10 @@
-const generateHtmlForOneDay = (
+const generateHtmlForOneDay = ({
   numberOfDay,
   breakfast,
   lunch,
   dinner,
-  macros
-) => {
+  macros,
+}) => {
   const parentDiv = document.createElement('div');
 
   //creating a 'line' to put behind each day

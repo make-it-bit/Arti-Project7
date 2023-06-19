@@ -24,12 +24,12 @@
         </div>
       </header>
       <main>
-        <section class="form_section">
+        <section class="formSection">
           <div class="container">
-            <div class="row form_selector">
+            <div class="row formSelector" id="form_selector">
               <label
                 for="calculate_your_macros"
-                class="col radio_label big_label"
+                class="col radioLabel bigLabel"
               >
                 <input
                   type="radio"
@@ -39,15 +39,15 @@
                 />
                 <span>Calculate Your Macros</span>
               </label>
-              <label for="enter_your_macros" class="col radio_label big_label">
+              <label for="enter_your_macros" class="col radioLabel bigLabel">
                 <input type="radio" id="enter_your_macros" name="form_type" />
                 <span>Enter Your Own Macros</span>
               </label>
             </div>
           </div>
-          <form class="form1 container">
-            <div class="row new_form_item">
-              <label for="form1_height_input" class="big_label brighter_text"
+          <form class="form1 container" id="form1">
+            <div class="row newFormItem">
+              <label for="form1_height_input" class="bigLabel brighterText"
                 >Height</label
               >
               <input
@@ -59,8 +59,8 @@
                 required
               />
             </div>
-            <div class="row new_form_item">
-              <label for="form1_weight_input" class="big_label brighter_text"
+            <div class="row newFormItem">
+              <label for="form1_weight_input" class="bigLabel brighterText"
                 >Weight</label
               >
               <input
@@ -72,8 +72,8 @@
                 required
               />
             </div>
-            <div class="row new_form_item">
-              <label for="form1_age_input" class="big_label brighter_text"
+            <div class="row newFormItem">
+              <label for="form1_age_input" class="bigLabel brighterText"
                 >Age</label
               >
               <input
@@ -85,10 +85,10 @@
                 required
               />
             </div>
-            <div class="row d-flex justify-content-center new_form_item">
+            <div class="row d-flex justify-content-center newFormItem">
               <label
                 for="form1_radio_gender_male"
-                class="col radio_label small_label"
+                class="col radioLabel smallLabel"
               >
                 <input
                   type="radio"
@@ -101,7 +101,7 @@
               </label>
               <label
                 for="form1_radio_gender_female"
-                class="col radio_label small_label"
+                class="col radioLabel smallLabel"
               >
                 <input
                   type="radio"
@@ -114,17 +114,17 @@
               </label>
             </div>
             <!--Activity level starts here-->
-            <div class="row justify-content-center new_form_item">
+            <div class="row justify-content-center newFormItem">
               <label
                 for="form1_activity_level_radio"
-                class="big_label brighter_text"
+                class="bigLabel brighterText"
                 ><span>Activity level</span></label
               >
             </div>
             <div class="row">
               <label
                 for="form1_activity_level_radio_sedentary"
-                class="radio_label small_label"
+                class="radioLabel smallLabel"
               >
                 <input
                   type="radio"
@@ -143,7 +143,7 @@
             <div class="row">
               <label
                 for="form1_activity_level_radio_lightly_active"
-                class="radio_label small_label"
+                class="radioLabel smallLabel"
               >
                 <input
                   type="radio"
@@ -159,7 +159,7 @@
             <div class="row">
               <label
                 for="form1_activity_level_radio_active"
-                class="row radio_label small_label"
+                class="row radioLabel smallLabel"
               >
                 <input
                   type="radio"
@@ -175,7 +175,7 @@
             <div class="row">
               <label
                 for="form1_activity_level_radio_very_active"
-                class="row radio_label small_label"
+                class="row radioLabel smallLabel"
               >
                 <input
                   type="radio"
@@ -193,7 +193,7 @@
             <div class="row">
               <label
                 for="form1_activity_level_radio_extremely_active"
-                class="row radio_label small_label"
+                class="row radioLabel smallLabel"
               >
                 <input
                   type="radio"
@@ -210,17 +210,15 @@
               </label>
             </div>
             <!--Goal-->
-            <div class="row new_form_item">
-              <label
-                for="form1_weight_goal_radio"
-                class="big_label brighter_text"
+            <div class="row newFormItem">
+              <label for="form1_weight_goal_radio" class="bigLabel brighterText"
                 >Goal</label
               >
             </div>
             <div class="row">
               <label
                 for="form1_weight_goal_radio_lose_weight"
-                class="row radio_label small_label"
+                class="row radioLabel smallLabel"
               >
                 <input
                   type="radio"
@@ -235,7 +233,7 @@
             <div class="row">
               <label
                 for="form1_weight_goal_radio_maintain_weight"
-                class="row radio_label small_label"
+                class="row radioLabel smallLabel"
               >
                 <input
                   type="radio"
@@ -250,7 +248,7 @@
             <div class="row">
               <label
                 for="form1_weight_goal_radio_gain_weight"
-                class="row radio_label small_label"
+                class="row radioLabel smallLabel"
               >
                 <input
                   type="radio"
@@ -263,15 +261,15 @@
               </label>
             </div>
             <!--Diet type-->
-            <div class="row new_form_item">
-              <label for="form1_diet_type_radio" class="big_label brighter_text"
+            <div class="row newFormItem">
+              <label for="form1_diet_type_radio" class="bigLabel brighterText"
                 >Diet type</label
               >
             </div>
             <div class="row">
               <label
                 for="form1_diet_type_radio_normal"
-                class="row radio_label small_label"
+                class="row radioLabel smallLabel"
               >
                 <input
                   type="radio"
@@ -286,7 +284,7 @@
             <div class="row">
               <label
                 for="form1_diet_type_radio_vegetarian"
-                class="row radio_label small_label"
+                class="row radioLabel smallLabel"
               >
                 <input
                   type="radio"
@@ -301,7 +299,7 @@
             <div class="row">
               <label
                 for="form1_diet_type_radio_vegan"
-                class="row radio_label small_label"
+                class="row radioLabel smallLabel"
               >
                 <input
                   type="radio"
@@ -313,14 +311,11 @@
                 <span>Vegan</span>
               </label>
             </div>
-            <div class="row justify-content-center new_form_item">
-              <label for="form1_allergies" class="big_label brighter_text"
+            <div class="row justify-content-center newFormItem">
+              <label for="form1_allergies" class="bigLabel brighterText"
                 >Im allergic towards</label
               >
-              <label
-                for="form1_allergy_nuts"
-                class="radio_label col small_label"
-              >
+              <label for="form1_allergy_nuts" class="radioLabel col smallLabel">
                 <input
                   type="checkbox"
                   id="form1_allergy_nuts"
@@ -329,10 +324,7 @@
                 />
                 <span>Nuts</span>
               </label>
-              <label
-                for="form1_allergy_fish"
-                class="radio_label col small_label"
-              >
+              <label for="form1_allergy_fish" class="radioLabel col smallLabel">
                 <input
                   type="checkbox"
                   id="form1_allergy_fish"
@@ -343,7 +335,7 @@
               </label>
               <label
                 for="form1_allergy_dairy"
-                class="radio_label col small_label"
+                class="radioLabel col smallLabel"
               >
                 <input
                   type="checkbox"
@@ -354,7 +346,7 @@
                 <span>Dairy</span>
               </label>
             </div>
-            <div class="row new_form_item">
+            <div class="row newFormItem">
               <button type="submit" id="form1_submit_button">
                 Calculate Macros
               </button>
@@ -362,11 +354,11 @@
           </form>
           <form class="form2 container" id="form2">
             <div id="form2_error_message"></div>
-            <div class="row new_form_item">
+            <div class="row newFormItem">
               <select
                 name="diet_type"
                 id="form2_diet_type_select"
-                class="form2_select_box"
+                class="form2SelectBox"
                 required
               >
                 <option value="" selected disabled style="display: none">
@@ -377,7 +369,7 @@
                 <option value="vegan">Vegan</option>
               </select>
             </div>
-            <div class="row new_form_item">
+            <div class="row newFormItem">
               <input
                 type="number"
                 id="form2_calories"
@@ -387,7 +379,7 @@
                 required
               />
             </div>
-            <div class="row new_form_item">
+            <div class="row newFormItem">
               <input
                 type="number"
                 id="form2_protein"
@@ -397,7 +389,7 @@
                 required
               />
             </div>
-            <div class="row new_form_item">
+            <div class="row newFormItem">
               <input
                 type="number"
                 id="form2_fat"
@@ -407,7 +399,7 @@
                 required
               />
             </div>
-            <div class="row new_form_item">
+            <div class="row newFormItem">
               <input
                 type="number"
                 id="form2_carbohydrates"
@@ -417,14 +409,11 @@
                 required
               />
             </div>
-            <div class="row new_form_item">
-              <label class="big_label brighter_text" for="form2_allergies"
+            <div class="row newFormItem">
+              <label class="bigLabel brighterText" for="form2_allergies"
                 ><span>Im allergic towards</span></label
               >
-              <label
-                for="form2_allergy_nuts"
-                class="col radio_label small_label"
-              >
+              <label for="form2_allergy_nuts" class="col radioLabel smallLabel">
                 <input
                   type="checkbox"
                   id="form2_allergy_nuts"
@@ -433,10 +422,7 @@
                 />
                 <span>Nuts</span>
               </label>
-              <label
-                for="form2_allergy_fish"
-                class="col radio_label small_label"
-              >
+              <label for="form2_allergy_fish" class="col radioLabel smallLabel">
                 <input
                   type="checkbox"
                   id="form2_allergy_fish"
@@ -447,7 +433,7 @@
               </label>
               <label
                 for="form2_allergy_dairy"
-                class="col radio_label small_label"
+                class="col radioLabel smallLabel"
               >
                 <input
                   type="checkbox"
@@ -458,12 +444,12 @@
                 <span>Dairy</span>
               </label>
             </div>
-            <div class="row new_form_item">
+            <div class="row newFormItem">
               <button type="submit">Generate Meal plan</button>
             </div>
           </form>
-          <section class="macro_results">
-            <div class="brighter_text">
+          <section class="macroResults" id="macro_results">
+            <div class="brighterText">
               <h2>Your Suggested Macros</h2>
             </div>
             <div class="container">
@@ -510,7 +496,7 @@
         </section>
       </main>
     </div>
-    <footer class="brighter_text">
+    <footer class="brighterText">
       <p>© 2023 Bitropia, All Rights Reserved</p>
     </footer>
   </body>

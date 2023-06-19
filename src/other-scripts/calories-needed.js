@@ -1,11 +1,11 @@
-const calculateCaloriesAndMacrosNeeded = (
-  weight,
-  height,
-  age,
-  gender,
-  activityLevel,
-  weightGoal
-) => {
+const calculateCaloriesAndMacrosNeeded = ({
+  userWeight: weight,
+  userHeight: height,
+  userAge: age,
+  userGender: gender,
+  userActivityLevel: activityLevel,
+  userWeightGoal: weightGoal,
+}) => {
   //calculating user's bmr
   let bmr;
   if (gender === 'male') {

@@ -1,9 +1,8 @@
 import calculateCaloriesAndMacrosNeeded from './calories-needed';
 import getMealPlan from './mealplan-generator';
-//import generateHtmlForMeals from "./display-meal-plan";
 
-//setting up the enviornment
-const macroResultsSection = document.querySelector('.macro_results');
+//"setting up the enviornment"
+const macroResultsSection = document.querySelector('#macro_results');
 macroResultsSection.style.display = 'none';
 
 let macros;
@@ -52,14 +51,14 @@ form1.addEventListener('submit', (e) => {
     );
 
     //putting together the diet
-    const userMacros = calculateCaloriesAndMacrosNeeded(
+    const userMacros = calculateCaloriesAndMacrosNeeded({
       userWeight,
       userHeight,
       userAge,
       userGender,
       userActivityLevel,
-      userWeightGoal
-    );
+      userWeightGoal,
+    });
 
     showUserMacroResults([
       userMacros.caloriesNeeded,

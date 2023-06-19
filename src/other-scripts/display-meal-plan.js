@@ -43,13 +43,13 @@ const generateHtmlForMeals = (objectWithArrays) => {
         break;
       }
     }
-    const dataToDisplay = generateHtmlForOneDay(
-      i + 1,
-      objectWithArrays[0][i],
-      objectWithArrays[1][i],
-      objectWithArrays[2][i],
-      objectWithArrays[3]
-    );
+    const dataToDisplay = generateHtmlForOneDay({
+      numberOfDay: i + 1,
+      breakfast: objectWithArrays[0][i],
+      lunch: objectWithArrays[1][i],
+      dinner: objectWithArrays[2][i],
+      macros: objectWithArrays[3],
+    });
     mealplanResultsSection.appendChild(dataToDisplay);
     i++;
   }

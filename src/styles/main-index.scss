@@ -8,7 +8,7 @@ body{
     min-height: 100vh;
 }
 
-//the flex properties of these classes now mainly work with bootstrap grid
+//the flex properties of the header now mainly work with bootstrap grid
 header {
     text-align: center;
     color: variables.$blackish;
@@ -33,7 +33,7 @@ header img {
     margin: 1vw auto 0 auto;
 }
 
-.form_section {
+.formSection {
     text-align: center;
     background-color: variables.$blackish;
     width: 80%;
@@ -51,14 +51,14 @@ input[type=checkbox] {
     display: none;
 }
 
-.radio_label{
+.radioLabel{
     background-color: variables.$medium-green;
     border: 2px solid variables.$dark-green;
     margin: 2px;
     padding: 3px;
 }
 
-.radio_label:hover {
+.radioLabel:hover {
     transform: scale(1.05);
     transition: 0.3s;
 }
@@ -67,29 +67,29 @@ input[type=checkbox] {
     margin: auto 15px;
 }
 
-.radio_label span:first-of-type{
+.radioLabel span:first-of-type{
     font-weight: 600;
     display: block;
 }
 
-.big_label {
+.bigLabel {
     font-size: 1.45rem;
     font-weight: 550;
 }
 
-.small_label span {
+.smallLabel span {
     font-size: 1.1rem;
 }
 
-.small_label span:first-of-type{
+.smallLabel span:first-of-type{
     font-size: 1.35rem;
 }
 
-.radio_label:has(> input:checked) {
+.radioLabel:has(> input:checked) {
     background-color: variables.$bright-green;
 }
 
-.new_form_item {
+.newFormItem {
     margin-top: 12px;
 }
 
@@ -97,7 +97,7 @@ input[type=checkbox] {
     max-width: 90%;
 }
 
-.form_section h2{
+.formSection h2{
     color: variables.$blackish;
     margin-top: 5px;
     font-weight: 600;
@@ -158,24 +158,24 @@ button:hover {
     color: variables.$medium-green;
 }
 
-.form2_select_box {
+.form2SelectBox {
     background-color: variables.$medium-green;
     font-size: 1.1rem;
     border: 2px solid variables.$medium-green;
-    padding: 5px 8px;
+    padding: 6px 8px;
 }
 
-.form2_select_box:hover, .form2_select_box:focus {
+.form2SelectBox:hover, .form2SelectBox:focus {
     outline: none;
     transform: scaleY(1.1);
 }
 
-.form2_select_box option:hover, .form2_select_box option:checked, select:focus > option:checked {
+.form2SelectBox option:hover, .form2SelectBox option:checked, select:focus > option:checked {
     background-color: variables.$bright-green;
     background: variables.$bright-green !important;
 }
 
-.brighter_text {
+.brighterText {
     color: variables.$bright-green;
 }
 
@@ -183,23 +183,23 @@ button:hover {
     margin-top: calc(2.5vh + 7px);
 }
 
-.macro_results {
+.macroResults {
     margin: calc(2.5vh + 7px) auto;
 }
 
-.macro_results h2 {
+.macroResults h2 {
     color: variables.$bright-green;
 }
 
-.macro_results {
+.macroResults {
     color: variables.$medium-green;
 }
 
-.macro_results p {
+.macroResults p {
     font-size: 1.2rem;
 }
 
-.macro_results h3 {
+.macroResults h3 {
     font-size: 1.5rem;
 }
 
@@ -213,13 +213,13 @@ footer {
 
 
 @media screen and (max-width: 825px) {
-    .form_selector .radio_label{
+    .formSelector .radioLabel{
         margin: auto 3px;
         height: 70px;
         display: flex;
         align-items: center;
     }
-    .form_selector .radio_label:hover {
+    .formSelector .radioLabel:hover {
         transform: none;
         margin: auto 3px;
         background-color: variables.$bright-green;
@@ -233,30 +233,30 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
-    .form_selector .radio_label {
+    .formSelector .radioLabel {
         height: auto;
     }  
     html {
         font-size: 15px;
     }
-    .macro_results h3 {
+    .macroResults h3 {
         margin-top: 5px;
         margin-bottom: 5px;
     }
-    .macro_results p {
+    .macroResults p {
         margin-bottom: 7px;
     }
-    .macro_results_get_meal_plan_button{
+    .macroResults_get_meal_plan_button{
         margin-top: 12px;
     }
 }
 
 @media screen and (max-width: 385px) {
-    .radio_label:hover {
+    .radioLabel:hover {
         transform: none;
         background-color: variables.$bright-green;
     }
-    .form_section {
+    .formSection {
         width: 90%;
     }
     html {
@@ -264,13 +264,13 @@ footer {
     }
 }
 @media screen and (max-width: 307px) {
-    .form_selector .radio_label {
+    .formSelector .radioLabel {
         height: 120px;
     }  
 }
 
 @media screen and (max-width: 273px) {
-    .form_selector .radio_label {
+    .formSelector .radioLabel {
         height: auto;
     }
 }
