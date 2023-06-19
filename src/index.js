@@ -1,12 +1,15 @@
 import nutritionIcon from './public/nutrition_icon.svg';
 import './styles/main-index.scss';
 
+//displaying the icon in the header
 document.querySelector('#calory_icon').src = nutritionIcon;
 
 //displaying the form as neccesseary
-const calculateYourMacrosButton = document.querySelector('#calculate_your_macros');
+const calculateYourMacrosButton = document.querySelector(
+  '#calculate_your_macros'
+);
 const enterYourMacrosButton = document.querySelector('#enter_your_macros');
-const macroResultsSection = document.querySelector('.macro_results')
+const macroResultsSection = document.querySelector('.macro_results');
 
 const form1 = document.querySelector('.form1');
 const form2 = document.querySelector('.form2');
@@ -15,13 +18,12 @@ const form2 = document.querySelector('.form2');
 form2.style.display = 'none';
 
 document.querySelector('.form_selector').addEventListener('click', () => {
-    if (enterYourMacrosButton.checked) {
-        form1.style.display = 'none';
-        macroResultsSection.style.display = 'none';
-        form2.style.display = 'block';
-    } else if (calculateYourMacrosButton.checked) {
-        form2.style.display = 'none';
-        form1.style.display = 'block';
-    };
+  if (enterYourMacrosButton.checked) {
+    form1.style.display = 'none';
+    macroResultsSection.style.display = 'none';
+    form2.style.display = 'block';
+  } else if (calculateYourMacrosButton.checked) {
+    form2.style.display = 'none';
+    form1.style.display = 'block';
+  }
 });
-
